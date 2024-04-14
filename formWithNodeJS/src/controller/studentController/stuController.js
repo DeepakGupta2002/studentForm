@@ -1,3 +1,4 @@
+
 const { table } = require("../../model/studentSchema");
 const rn = require('random-number');
 
@@ -10,16 +11,17 @@ const options = {
 const postcontroller = async (req, res) => {
     const { studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress } = req.body;
 
-    // const user=await tablet.findOne({studentEmail:studentEmail})
+
     try {
 
         const user = await table({ studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress });
 
         await user.save();
         res.status(201).json({
-            message: "student added successfully",
-            user: req.body
+            message: "<h1>student added successfully<h1>",
+
         })
+        
     } catch (err) {
         res.status(501).send("error hai ", err);
     }
