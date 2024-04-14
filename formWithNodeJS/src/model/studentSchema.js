@@ -1,18 +1,19 @@
 const { mongoose } = require("../../config/studentdatabase/stuDB");
 
-
 const tableSchema = mongoose.Schema({
     studentName: {
         type: String,
-
+        required: true
     },
     studentEmail: {
         type: String,
-        unique: true
+        unique: true,
+        required: true
     },
     studentPhone: {
-        type: Number,
-        unique: true
+        type: String,
+        unique: true,
+        required: true
     },
     studentDOB: {
         type: String
@@ -23,8 +24,8 @@ const tableSchema = mongoose.Schema({
     studentAddress: {
         type: String
     }
-
 });
 
 const table = mongoose.model("student", tableSchema);
+
 module.exports = { table };

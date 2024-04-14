@@ -8,6 +8,7 @@ const app = express();
 require("dotenv/config");
 
 const PORT = process.env.PORT || 3000; // Port number
+// app.use(express.json());
 
 // Middleware to parse form data
 app.use(express.urlencoded({ extended: true }));
@@ -15,10 +16,11 @@ app.use(express.urlencoded({ extended: true }));
 // Static files middleware to serve HTML, CSS, JS, images, etc.
 app.use(express.static(path.join(__dirname, '..', '../public')));
 
-// // Route to serve HTML page
+// Route to serve HTML page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
+// app.use(studentRotue);
 
 // app.use(studentRotue);
 app.use(studentForm);

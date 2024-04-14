@@ -1,24 +1,27 @@
-const express = require('express');
-const path = require('path');
-const studentRotue = express.Router();
-const app = express();
+// const express = require('express');
+// const path = require('path');
+// const bodyParser = require('body-parser');
 
-// Serve static files from 'public' directory
+// const studentRotue = express.Router();
+// const app = express();
 
-// Static files middleware to serve HTML, CSS, JS, images, etc.
+// // Serve static files from 'public' directory
 
-// Static files middleware to serve HTML, CSS, JS, images, etc.
-app.use(express.static(path.join(__dirname, '/public')));
+// app.use(express.urlencoded({ extended: true }));
+// // Static files middleware to serve HTML, CSS, JS, images, etc.
 
-// Route to serve HTML page
-studentRotue.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
-});
+// // Static files middleware to serve HTML, CSS, JS, images, etc.
+// app.use(express.static(path.join(__dirname, '..', '../public')));
 
-// Global error handler
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something broke!');
-});
+// // Route to serve HTML page
+// // studentRotue.get('/', (req, res) => {
+// //     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
+// // });
 
-module.exports = { studentRotue };
+// // Global error handler
+// app.use((err, req, res, next) => {
+//     console.error(err.stack);
+//     res.status(500).send('Something broke!');
+// });
+
+// module.exports = { studentRotue };
