@@ -12,15 +12,16 @@ const postcontroller = async (req, res) => {
     const { studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress } = req.body;
 
     try {
-        const newStudent = await table.create({
-            studentName,
-            studentEmail,
-            studentPhone,
-            studentDOB,
-            studentGender,
-            studentAddress,
-            key: rn(options)
-        });
+        const newStudent = await table.create
+            ({
+                studentName,
+                studentEmail,
+                studentPhone,
+                studentDOB,
+                studentGender,
+                studentAddress,
+                key: rn(options)
+            });
 
         res.status(200).json({
             message: 'Student form submitted successfully',

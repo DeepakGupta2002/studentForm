@@ -7,7 +7,7 @@ const tableSchema = mongoose.Schema({
     },
     studentEmail: {
         type: String,
-        unique: true,
+
         required: true
     },
     studentPhone: {
@@ -26,6 +26,6 @@ const tableSchema = mongoose.Schema({
     }
 });
 
-const table = mongoose.model("student", tableSchema);
+const table = mongoose.model("student_makhanlal", tableSchema);
 
 module.exports = { table };
