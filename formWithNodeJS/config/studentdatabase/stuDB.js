@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 // }).catch((err) => {
 //     console.log(err);
 // });
-// mongoose.connect("mongodb://localhost:27017");
+mongoose.connect("mongodb://localhost:27017");
 
 module.exports = { mongoose };
 
