@@ -17,7 +17,7 @@ const postcontroller = async (req, res) => {
         const user = await table({ studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress });
 
         await user.save();
-        res.status(201).send("data successfully inserted to database");
+        res.status(200).send("data successfully inserted to database");
         
     } catch (err) {
         res.status(501).send("error hai ", err);
