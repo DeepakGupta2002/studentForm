@@ -23,13 +23,12 @@ const postcontroller = async (req, res) => {
         })
 
 
-        // res.status(200).send("data successfully inserted to database");
 
 
     } catch (err) {
         res.status(501).json({
             msg: "it server error",
-            error: err.msg
+            error: err
         });
     }
 
