@@ -27,7 +27,7 @@ const postcontroller = async (req, res) => {
 
     } catch (err) {
         res.status(501).json({
-            msg: "it server error",
+            msg: "your email and already exists ",
             error: err
         });
     }
