@@ -21,9 +21,12 @@ const postcontroller = async (req, res) => {
             message: "<h1>student added successfully<h1>",
 
         })
-        
+
     } catch (err) {
-        res.status(501).send("error hai ", err);
+        res.status(501).json({
+            msg: "it server error",
+            error: err.msg
+        });
     }
 
 

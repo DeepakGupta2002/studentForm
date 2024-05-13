@@ -3,6 +3,11 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const { studentRotue } = require('./Routes/student/studentRoute');
 const { studentForm } = require('./Routes/postRoute/Student_post');
+const os = require('os');
+// const { stringify } = require('querystring');
+// console.log("available cpu", os.getAvailableParallelism);
+
+// Create an express app
 
 const app = express();
 require("dotenv/config");
