@@ -26,6 +26,6 @@ const tableSchema = mongoose.Schema({
     }
 }, { timestamps: true });
 
-const table = mongoose.model("student_makhanlal", tableSchema);
+const table = mongoose.model("user_student_makhanlal", tableSchema);
 
 module.exports = { table };

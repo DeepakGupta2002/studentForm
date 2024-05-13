@@ -17,7 +17,7 @@ const postcontroller = async (req, res) => {
         const user = await table({ studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress });
 
         await user.save();
-        res.status(201).json({
+        res.status(200).json({
             message: "<h1>student added successfully<h1>",
 
         })
