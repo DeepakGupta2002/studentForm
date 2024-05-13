@@ -7,14 +7,13 @@ const tableSchema = mongoose.Schema({
     },
     studentEmail: {
         type: String,
+        required: true,
         unique: true,
-
-        required: true
     },
     studentPhone: {
         type: String,
+        required: true,
         unique: true,
-        required: true
     },
     studentDOB: {
         type: String
@@ -25,7 +24,7 @@ const tableSchema = mongoose.Schema({
     studentAddress: {
         type: String
     }
-});
+}, { timestamps: true });
 
 const table = mongoose.model("student_makhanlal", tableSchema);
 
