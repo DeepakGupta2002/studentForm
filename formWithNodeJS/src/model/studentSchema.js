@@ -7,6 +7,7 @@ const tableSchema = mongoose.Schema({
     },
     studentEmail: {
         type: String,
+        unique: true,
 
         required: true
     },
