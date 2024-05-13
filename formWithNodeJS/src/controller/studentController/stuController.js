@@ -17,11 +17,16 @@ const postcontroller = async (req, res) => {
         const user = await table({ studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress });
 
         await user.save();
+<<<<<<< HEAD
         res.status(201).json({
             message: "<h1>student added successfully<h1>",
 
         })
 
+=======
+        res.status(200).send("data successfully inserted to database");
+        
+>>>>>>> origin/master
     } catch (err) {
         res.status(501).json({
             msg: "it server error",
