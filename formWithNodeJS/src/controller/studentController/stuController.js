@@ -23,7 +23,7 @@ const postcontroller = async (req, res) => {
         })
 
 
-        res.status(200).send("data successfully inserted to database");
+        // res.status(200).send("data successfully inserted to database");
 
 
     } catch (err) {
