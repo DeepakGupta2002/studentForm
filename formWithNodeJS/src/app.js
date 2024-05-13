@@ -25,14 +25,11 @@ app.use(express.static(path.join(__dirname, '..', '../public')));
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
 });
-// app.use(studentRotue);
+
 
 // app.use(studentRotue);
 app.use(studentForm);
-// app.post('/submit-student', (req, res) => {
-//     console.log(req.body);
-//     res.json(req.body);
-// });
+
 
 // Start the server
 app.listen(PORT, () => {

@@ -1,12 +1,12 @@
 
 const { table } = require("../../model/studentSchema");
-const rn = require('random-number');
+// const rn = require('random-number');
 
-const options = {
-    min: -1000,
-    max: 1000,
-    integer: true
-};
+// const options = {
+//     min: -1000,
+//     max: 1000,
+//     integer: true
+// };
 
 const postcontroller = async (req, res) => {
     const { studentName, studentEmail, studentPhone, studentDOB, studentGender, studentAddress } = req.body;
